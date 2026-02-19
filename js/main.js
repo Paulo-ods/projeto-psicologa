@@ -1,3 +1,5 @@
+let whats = document.getElementById('whats')
+
 // Mudar estilo do Header ao rolar
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
@@ -50,7 +52,79 @@ function destacarCard(idClicado) {
     });
 }
 
+
 // Inicia o primeiro card como ativo ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
     destacarCard('card-individual'); 
 });
+
+
+//individual
+AOS.init({
+    duration: 1000,
+    once: true,
+});
+
+// Lógica do Guia de Respiração
+const circle = document.getElementById('breath-circle');
+const text = document.getElementById('breath-text');
+let state = "inspire";
+
+setInterval(() => {
+    if (state === "inspire") {
+        circle.style.transform = "scale(1.4)";
+        text.innerText = "Expire...";
+        state = "expire";
+    } else {
+        circle.style.transform = "scale(1.0)";
+        text.innerText = "Inspire...";
+        state = "inspire";
+    }
+}, 4000);
+
+
+//casal
+AOS.init();
+
+function toggleAccordion(button) {
+    const parent = button.closest('.group');
+    const content = parent.querySelector('.accordion-content');
+    
+    parent.classList.toggle('active'); // Adiciona/remove a classe 'active' no pai para o SVG
+    
+    if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+    }
+}
+
+
+//gestao
+AOS.init();
+
+const slider = document.getElementById('anxietyRange');
+const responseDiv = document.getElementById('anxietyResponse');
+
+slider.oninput = function() {
+    let val = this.value;
+    if(val < 33) {
+        responseDiv.innerHTML = '<div class="text-teal-400 text-5xl mb-6">🍃</div><h4 class="text-2xl font-bold mb-4 text-white">Equilíbrio em foco.</h4><p class="text-teal-100/60 text-white">Você está em um bom caminho. A terapia aqui serve para blindar sua mente contra estresses futuros.</p>';
+    } else if(val < 66) {
+        responseDiv.innerHTML = '<div class="text-yellow-400 text-5xl mb-6">⚠️</div><h4 class="text-2xl font-bold mb-4 text-white">Alerta moderado.</h4><p class="text-teal-100/60 text-white">Sua mente está começando a sobrecarregar. É o momento ideal para intervir antes que vire uma crise.</p>';
+    } else {
+        responseDiv.innerHTML = '<div class="text-red-400 text-5xl mb-6">🔥</div><h4 class="text-2xl font-bold mb-4 text-white">Urgência de Cuidado.</h4><p class="text-teal-100/60 text-white">Você está no limite. Vamos agendar uma sessão prioritária para aliviar esse peso imediatamente.</p>';
+    }
+};
+
+
+//api
+whats.addEventListener("click", function(){
+
+    let endereco = 'Olá, vim atráves do site e tenho interesse na sua consultoria.'
+    let message = encodeURIComponent(endereco);
+    let phone = "46988192326";
+    
+    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+
+})

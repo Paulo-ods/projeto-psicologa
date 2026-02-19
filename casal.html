@@ -176,8 +176,8 @@
     <footer class="py-24 bg-slate-100 text-center px-6 border-t border-slate-200">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-5xl md:text-7xl font-serif text-slate-900 mb-12">O amor vale a <span class="text-teal-700">conversa.</span></h2>
-            <a href="https://wa.me/seu-numero" class="inline-flex items-center gap-6 bg-teal-900 text-white pl-12 pr-4 py-4 rounded-full text-xl font-bold group hover:bg-teal-800 transition-all">
-                Agendar nossa Primeira Sessão
+            <a  class="inline-flex items-center gap-6 bg-teal-900 text-white pl-12 pr-4 py-4 rounded-full text-xl font-bold group hover:bg-teal-800 transition-all">
+                <button id="whats">Agendar nossa Primeira Sessão</button>
                 <span class="w-12 h-12 bg-teal-400 rounded-full flex items-center justify-center text-teal-900 group-hover:translate-x-2 transition-transform">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </span>
@@ -187,21 +187,6 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-
-        function toggleAccordion(button) {
-            const parent = button.closest('.group');
-            const content = parent.querySelector('.accordion-content');
-            
-            parent.classList.toggle('active'); // Adiciona/remove a classe 'active' no pai para o SVG
-            
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-        }
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

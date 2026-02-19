@@ -50,10 +50,10 @@
                     Um convite para olhar para dentro com gentileza. Aqui, criamos um espaço seguro para desatar os nós que impedem você de ser quem realmente é.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://wa.me/seu-numero" class="bg-teal-800 text-white px-8 py-4 rounded-2xl font-bold hover:bg-teal-900 transition-all shadow-lg shadow-teal-900/20 text-center">
+                    <a href="index.html#contato" class="bg-teal-800 text-white px-8 py-4 rounded-2xl font-bold hover:bg-teal-900 transition-all shadow-lg shadow-teal-900/20 text-center">
                         Agendar Sessão
                     </a>
-                    <a href="#como-funciona" class="bg-white text-slate-600 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50 transition-all border border-slate-200 text-center">
+                    <a href="#identy" class="bg-white text-slate-600 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50 transition-all border border-slate-200 text-center">
                         Saiba Mais
                     </a>
                 </div>
@@ -86,7 +86,7 @@
     </div>
 </section>
 
-    <section class="py-24 bg-white rounded-t-[5rem]">
+    <section id="identy" class="py-24 bg-white rounded-t-[5rem]">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-serif text-slate-900 mb-4">Você se identifica com algum desses sentimentos?</h2>
@@ -143,36 +143,14 @@
             <p class="text-slate-600 mb-10 text-lg leading-relaxed">
                 As sessões duram 50 minutos e acontecem em um ambiente seguro e sigiloso (presencial ou online).
             </p>
-            <a href="https://wa.me/seu-numero" class="inline-flex items-center gap-4 bg-teal-800 text-white px-12 py-6 rounded-3xl font-bold text-xl hover:bg-teal-900 transition-all hover:scale-105 active:scale-95 shadow-2xl">
-                Agendar via WhatsApp
+            <a  class="inline-flex items-center gap-4 bg-teal-800 text-white px-12 py-6 rounded-3xl font-bold text-xl hover:bg-teal-900 transition-all hover:scale-105 active:scale-95 shadow-2xl">
+                <button id="whats">Agendar via WhatsApp</button>
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.483 8.413-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.308 1.654zm6.185-4.502l.344.204c1.472.873 3.176 1.335 4.921 1.336 5.148 0 9.336-4.187 9.339-9.338.002-2.496-.972-4.842-2.742-6.612-1.77-1.771-4.117-2.744-6.613-2.745-5.152 0-9.339 4.188-9.342 9.341-.002 1.834.538 3.623 1.56 5.166l.225.337-1.01 3.692 3.784-.991z"/></svg>
             </a>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-        });
-
-        // Lógica do Guia de Respiração
-        const circle = document.getElementById('breath-circle');
-        const text = document.getElementById('breath-text');
-        let state = "inspire";
-
-        setInterval(() => {
-            if (state === "inspire") {
-                circle.style.transform = "scale(1.4)";
-                text.innerText = "Expire...";
-                state = "expire";
-            } else {
-                circle.style.transform = "scale(1.0)";
-                text.innerText = "Inspire...";
-                state = "inspire";
-            }
-        }, 4000);
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
