@@ -177,7 +177,7 @@
         <div class="max-w-4xl mx-auto">
             <h2 class="text-5xl md:text-7xl font-serif text-slate-900 mb-12">O amor vale a <span class="text-teal-700">conversa.</span></h2>
             <a  class="inline-flex items-center gap-6 bg-teal-900 text-white pl-12 pr-4 py-4 rounded-full text-xl font-bold group hover:bg-teal-800 transition-all">
-                <button id="whats">Agendar nossa Primeira Sessão</button>
+                <button class="whats">Agendar nossa Primeira Sessão</button>
                 <span class="w-12 h-12 bg-teal-400 rounded-full flex items-center justify-center text-teal-900 group-hover:translate-x-2 transition-transform">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </span>
@@ -185,6 +185,16 @@
             <p class="mt-12 text-slate-500 text-sm">Respeito e Sigilo Total. Um novo capítulo começa aqui.</p>
         </div>
     </footer>
+
+    <button  class="fixed bottom-6 right-6 z-50 group flex items-center whats">
+        <span class="mr-3 bg-white text-slate-700 px-4 py-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium text-sm border border-slate-100">
+            Agende sua sessão
+        </span>
+        
+        <div class="whats bg-[#25D366] p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center">
+            <img src="assets/icons/icons8-whatsapp-48.png" class="w-10" alt="">
+        </div>
+    </button>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>

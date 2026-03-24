@@ -1,4 +1,16 @@
-let whats = document.getElementById('whats')
+let whats = document.querySelectorAll('.whats')
+
+whats.forEach(btn => {
+    btn.addEventListener("click", function() {
+
+        let endereco = 'Olá, tenho interesse na sua consultoria.';
+        let message = encodeURIComponent(endereco);
+        let phone = "5546988192326"; // com código do país
+
+        window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+
+    });
+});
 
 // Mudar estilo do Header ao rolar
 window.addEventListener('scroll', () => {
@@ -118,13 +130,3 @@ slider.oninput = function() {
 };
 
 
-//api
-whats.addEventListener("click", function(){
-
-    let endereco = 'Olá, vim atráves do site e tenho interesse na sua consultoria.'
-    let message = encodeURIComponent(endereco);
-    let phone = "46988192326";
-    
-    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
-
-})

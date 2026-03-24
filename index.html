@@ -290,7 +290,7 @@
                             <textarea rows="4" placeholder="Como posso te ajudar?" class="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-transparent focus:border-teal-500 focus:bg-white focus:ring-4 focus:ring-teal-500/5 transition-all outline-none resize-none text-slate-700 placeholder:text-slate-300"></textarea>
                         </div>
 
-                        <button type="submit" class="w-full bg-teal-900 text-white font-bold py-6 rounded-2xl hover:bg-teal-800 shadow-[0_15px_30px_rgba(13,67,61,0.2)] transition-all flex items-center justify-center gap-4 group overflow-hidden relative">
+                        <button type="submit" class="whats w-full bg-teal-900 text-white font-bold py-6 rounded-2xl hover:bg-teal-800 shadow-[0_15px_30px_rgba(13,67,61,0.2)] transition-all flex items-center justify-center gap-4 group overflow-hidden relative">
                             <span class="relative z-10">ENVIAR MENSAGEM</span>
                             <svg class="w-5 h-5 relative z-10 group-hover:translate-x-2 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </button>
@@ -331,37 +331,29 @@
         </div>
     </div>
 </section>
+    <button  class="fixed bottom-6 right-6 z-50 group flex items-center whats">
+        <span class="mr-3 bg-white text-slate-700 px-4 py-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium text-sm border border-slate-100">
+            Agende sua sessão
+        </span>
+        
+        <div class="whats bg-[#25D366] p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center">
+            <img src="assets/icons/icons8-whatsapp-48.png" class="w-10" alt="">
+        </div>
+    </button>
 
-
-
-        </div> </div>
-
-
-
-    <script src="js/main.js"></script>
+    
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000, // Duração da animação (1 segundo)
-    once: true,     // Anima apenas uma vez ao descer
-    offset: 100,    // Distância para começar a animar
-    easing: 'ease-in-out-quad' // Curva de animação suave
-  });
-</script>
+    <script>
+    AOS.init({
+        duration: 1000, // Duração da animação (1 segundo)
+        once: true,     // Anima apenas uma vez ao descer
+        offset: 100,    // Distância para começar a animar
+        easing: 'ease-in-out-quad' // Curva de animação suave
+    });
+    </script>
 
-    <button id="whats">
-        <a target="_blank" class="fixed bottom-6 right-6 z-50 group flex items-center">
-            <span class="mr-3 bg-white text-slate-700 px-4 py-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium text-sm border border-slate-100">
-                Agende sua sessão
-            </span>
-            <div class="bg-[#25D366] p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <!-- <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.224-3.52l.303.18c1.397.831 3.013 1.27 4.673 1.271 4.89 0 8.87-3.98 8.873-8.87.001-2.37-.922-4.599-2.598-6.275-1.676-1.677-3.907-2.599-6.276-2.6-4.891 0-8.871 3.98-8.873 8.87-.001 1.95.636 3.845 1.839 5.419l.202.264-.999 3.647 3.73-.978z"/>
-                </svg> -->
-                <img src="assets/icons/icons8-whatsapp-48.png" class="w-10" alt="">
-            </div>
-        </a>
-    </button>
+    <script src="js/main.js"></script>
 </body>
 </html>
+
