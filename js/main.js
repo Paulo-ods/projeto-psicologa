@@ -1,14 +1,36 @@
-let whats = document.querySelectorAll('.whats')
+const whats = document.querySelectorAll(".whats");
 
 whats.forEach(btn => {
-    btn.addEventListener("click", function() {
+    btn.addEventListener("click", function(e) {
+        // Evita que o formulário recarregue a página caso o botão seja um submit
+        e.preventDefault();
 
-        let endereco = 'Olá, tenho interesse na sua consultoria.';
-        let message = encodeURIComponent(endereco);
-        let phone = "5546988192326"; // com código do país
+        let phone = "5546988192326";
+        let finalMessage = "";
 
-        window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+        // 1. Tenta encontrar um formulário pai ou próximo a este botão
+        const form = btn.closest('form');
 
+        // 2. Lógica Condicional: Se o botão estiver dentro de um formulário, pegamos os dados
+        if (form) {
+            const nome = form.querySelector('input[type="text"]')?.value || "Não informado";
+            const tel = form.querySelector('input[type="tel"]')?.value || "Não informado";
+            const assunto = form.querySelector('select')?.value || "Não informado";
+            const msgEstendida = form.querySelector('textarea')?.value || "";
+
+            finalMessage = `Olá! Meu nome é ${nome}.
+                *Assunto:* ${assunto}
+                *Contato:* ${tel}
+                *Mensagem:* ${msgEstendida}`;
+        } 
+        // 3. Se não houver formulário (outros botões do site), usa a mensagem padrão
+        else {
+            finalMessage = 'Olá, tenho interesse na sua consultoria.';
+        }
+
+        // 4. Executa a abertura do WhatsApp
+        const messageEncoded = encodeURIComponent(finalMessage);
+        window.open(`https://wa.me/${phone}?text=${messageEncoded}`, "_blank");
     });
 });
 
